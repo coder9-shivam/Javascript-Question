@@ -1,0 +1,2 @@
+let calculation = '';
+eval(calculation);

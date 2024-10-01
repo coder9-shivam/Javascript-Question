@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9c Execrises</title>
+</head>
+<body>
+  <!-- <button onclick="
+    document.querySelector('.js-choice')
+      .innerHTML = 'you chose:heads';
+  ">heads</button>
+  <button onclick="
+    document.querySelector('.js-choice')
+      .innerHTML = 'you chose: tails';  
+  ">tails</button>
+  <p class="js-choice"></p> -->
+
+
+  <button onclick="
+    clickOption('heads');
+  ">heads</button>
+
+  <button onclick="
+    clickOption('tails');
+  ">tails</button>
+
+  <p class="js-choice"></p>
+
+  <script>
+    function clickOption(choice) {
+      let result = '';
+
+      if (choice === 'heads') {
+        result = 'you chose: heads';
+      }
+      else{
+        result = 'you chose: tails';
+      }
+
+      document.querySelector('.js-choice')
+        .innerHTML = result;
+    }
+  </script>
+</body>
+</html>

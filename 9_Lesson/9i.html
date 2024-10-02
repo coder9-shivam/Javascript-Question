@@ -6,8 +6,6 @@
     <title>9i Exercises</title>
   </head>
   <body>
-    <p>Cart Quantity</p>
-
     <button
       onclick="
       cartQuantityDisplay();
@@ -97,7 +95,8 @@
       }
 
       function cartQuantityDisplay() {
-        document.querySelector('.js-cart-qunatity').innerHTML = `Cart quantity: ${cartQuantity}`;
+        document.querySelector('.js-cart-quantity')
+          .innerHTML = `Cart quantity: ${cartQuantity}`;
       }
 
 

@@ -1,0 +1,30 @@
+body{
+  background-color: black;
+  color: white;
+  font-family: arial;
+}
+
+.calculation-result{
+  color: white;
+  font-size: 1.5rem;
+}
+
+.number-button{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.361);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.calculation-sign{
+  background-color: orange;
+}
+
+.clear-button{
+  font-size: 16px;
+}

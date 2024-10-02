@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10h Exercises</title>
+    <link rel="stylesheet" href="10h_style.css">
+
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under $40 = +$10 shipping.</p>
+    <p>Order under $40 = FREE shipping.</p>
+    
+    <input
+      class="js-cost-input cost-input"
+      type="number"
+      placeholder="Cost of order"
+      onkeydown="
+    handleCostKeydown(event);
+  "
+    />
+    <button
+      onclick="
+    calculateTotal();
+  "
+      class="calculate-button"
+    >
+      Calculate
+    </button>
+
+    <p class="js-total-cost"></p>
+    <p class="js-error-message error-message"></p>
+
+    <script src="10h_script.js"></script>
+  </body>
+</html>

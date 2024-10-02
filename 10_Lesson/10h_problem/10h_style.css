@@ -1,0 +1,23 @@
+body {
+  font-size: 1.1rem;
+  font-family: arial;
+}
+
+.cost-input {
+  padding: 10px 6px;
+  font-size: 0.9rem;
+}
+
+.calculate-button {
+  background-color: #008a00d8;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+
+.error-message{
+  color: red;
+  font-size: 1rem;
+}

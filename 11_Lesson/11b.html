@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>11a Exercises</title>
+  <title>11b Exercises</title>
 </head>
 <body>
   
 
   <script>
-    const nums = [10, 20, 30];
-    nums[2] = 99;
-    console.log(nums);
+    function getLastValue(array){
+      return array[array.length - 1];
+    }
+    console.log(getLastValue([1, 2, 3]));
   </script>
 </body>
 </html>

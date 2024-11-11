@@ -3,25 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11k Exercises</title>
+    <title>11o Exercises</title>
   </head>
   <body>
     <script>
-      function countWords(words) {
-        const obj = {};
-        for(let i = 0; i < words.length; i++){
-          const value = words[i];
-          if(!obj[value]){
-            obj[value] = 1;
-          }else{
-            obj[value]++;
-          }
+      let words = ['hello', 'world', 'search', 'good'];
+      let index = -1;
+
+      for(let i = 0; i < words.length; i++){
+        if(words[i] === 'search'){
+          index = i;
         }
-
-        return obj;
       }
+      console.log(index, words[index]);
 
-      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+      words = ['not', 'found'];
+      index = -1;
+
+      for(let i = 0; i < words.length; i++){
+        if(words[i] === 'search'){
+          index = i;
+        }
+      }
+      console.log(index, words[index]);
     </script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12c Exercises Advanced_functions</title>
+  </head>
+  <body>
+    <button class="js-start-button" onclick="startToFinish();">Start</button>
+
+    <script>
+      let stop = false;
+      let intervalId;
+      function startToFinish() {
+        const button = document.querySelector('.js-start-button');
+        if (!stop) {
+          intervalId = setInterval(function () {
+            button.innerHTML = "Finished!";
+          }, 1000);
+          stop = true;
+        } else{
+          button.innerHTML = "Start";
+          clearInterval(intervalId);
+          stop = false;
+        }
+      }
+    </script>
+  </body>
+</html>

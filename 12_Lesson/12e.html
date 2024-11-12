@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12e Exercises Advanced_functions</title>
+  </head>
+  <body>
+    <button class="js-add-to-cart-button" onclick="addButton();">
+      Add to cart
+    </button>
+    <p class="js-add-to-cart"></p>
+
+    <script>
+      function addButton(){
+        const messageButton = document.querySelector('.js-add-to-cart');
+        messageButton.innerHTML = "Added";
+
+        setInterval(function (){
+          messageButton.innerHTML = "";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

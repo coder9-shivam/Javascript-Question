@@ -6,19 +6,52 @@
     <title>12i Exercises Advanced_functions</title>
   </head>
   <body>
-    <button class="js-increase-btn" onclick="messages++">Add</button>
+    <button
+      class="js-increase-btn"
+      onclick="
+        messages++;
+        displayNotification();
+      ">Add</button>
 
-    <button class="js-decrease-btn" onclick="messages--">Remove</button>
+    <button
+      class="js-decrease-btn"
+      onclick="
+        if(messages > 0){
+          messages--;
+          if(messages === 0){
+            stopNotification();
+          }
+        }
+    ">Remove</button>
 
     <script>
       let messages = 2;
-      setInterval(function () {
-        if (document.title === "App" && message >= 0) {
-          document.title = `(${messages}) New messages`;
-        } else {
-          document.title = 'App';
+      let intervalId;
+      let isDisplayingNotification;
+
+      displayNotification();
+
+      function displayNotification(){
+        if(isDisplayingNotification){
+          return;
         }
-      }, 1000);
+        isDisplayingNotification = true;
+
+        intervalId = setInterval(function(){
+          if(document.title === 'App'){
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = "App"
+          }
+        }, 1000);
+      }
+
+      function stopNotification(){
+        isDisplayingNotification = false;
+
+        clearInterval(intervalId);
+        document.title = "App";
+      }
     </script>
   </body>
 </html>

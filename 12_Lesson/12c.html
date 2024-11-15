@@ -6,15 +6,15 @@
     <title>12c Exercises Advanced_functions</title>
   </head>
   <body>
-    <button class="js-start-button" onclick="startToFinish();">Start</button>
+    <button class="js-start-button">Start</button>
 
     <script>
       let stop = false;
       let intervalId;
+      const button = document.querySelector('.js-start-button');
       function startToFinish() {
-        const button = document.querySelector('.js-start-button');
         if (!stop) {
-          intervalId = setInterval(function () {
+          intervalId = setInterval(() => {
             button.innerHTML = "Finished!";
           }, 1000);
           stop = true;
@@ -24,6 +24,11 @@
           stop = false;
         }
       }
+
+      button.addEventListener('click', () => {
+        startToFinish();
+      })
+
     </script>
   </body>
 </html>

@@ -8,7 +8,7 @@
   <body>
     <script>
       let change = false;
-      setInterval(function(){
+      setInterval(() => {
         document.title = change ? "(2)New message" : "App";
         change = !change;    // change = true;
       }, 1000);

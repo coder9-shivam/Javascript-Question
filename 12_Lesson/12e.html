@@ -6,20 +6,23 @@
     <title>12e Exercises Advanced_functions</title>
   </head>
   <body>
-    <button class="js-add-to-cart-button" onclick="addButton();">
-      Add to cart
-    </button>
+    <button class="js-add-to-cart-btn">Add to cart</button>
     <p class="js-add-to-cart"></p>
 
     <script>
-      function addButton(){
-        const messageButton = document.querySelector('.js-add-to-cart');
+      const addbtn = document.querySelector(".js-add-to-cart-btn");
+      function addButton() {
+        const messageButton = document.querySelector(".js-add-to-cart");
         messageButton.innerHTML = "Added";
 
-        setInterval(function (){
+        setInterval(() => {
           messageButton.innerHTML = "";
-        }, 1000);
+        }, 2000);
       }
+
+      addbtn.addEventListener("click", () => {
+        addButton();
+      });
     </script>
   </body>
 </html>

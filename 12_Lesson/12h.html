@@ -6,19 +6,29 @@
     <title>12h Exercises Advanced_functions</title>
   </head>
   <body>
-    <button class="js-increase-btn" onclick="message++">Add</button>
+    <button class="js-increase-btn">Add</button>
 
-    <button class="js-decrease-btn" onclick="message--">Remove</button>
+    <button class="js-decrease-btn">Remove</button>
 
     <script>
+      const increasebtn = document.querySelector('.js-increase-btn');
+      const decreasebtn = document.querySelector('.js-decrease-btn');
       let message = 2;
-      setInterval(function () {
+      setInterval(() => {
         if (document.title === "App") {
           document.title = `${message} New message`;
         } else {
           document.title = 'App';
         }
       }, 1000);
+
+      increasebtn.addEventListener('click', () => {
+        message++;
+      })
+
+      decreasebtn.addEventListener('click', () => {
+        message--;
+      })
     </script>
   </body>
 </html>

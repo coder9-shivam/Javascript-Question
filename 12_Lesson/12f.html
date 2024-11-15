@@ -6,12 +6,13 @@
     <title>12f Exercises Advanced_functions</title>
   </head>
   <body>
-    <button class="js-add-to-cart-button" onclick="addButton();">
+    <button class="js-add-to-cart-btn">
       Add to cart
     </button>
     <p class="js-add-to-cart"></p>
 
     <script>
+      const addbtn = document.querySelector('.js-add-to-cart-btn')
       let timeoutId;
       function addButton(){
         const messageButton = document.querySelector('.js-add-to-cart');
@@ -19,10 +20,14 @@
 
         clearTimeout(timeoutId);
 
-        timeoutId = setTimeout(function(){
+        timeoutId = setTimeout(() => {
           messageButton.innerHTML = '';
         }, 2000);
       }
+
+      addbtn.addEventListener('click', () => {
+        addButton();
+      })
     </script>
   </body>
 </html>

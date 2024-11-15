@@ -6,28 +6,17 @@
     <title>12i Exercises Advanced_functions</title>
   </head>
   <body>
-    <button
-      class="js-increase-btn"
-      onclick="
-        messages++;
-        displayNotification();
-      ">Add</button>
+    <button class="js-increase-btn">Add</button>
 
-    <button
-      class="js-decrease-btn"
-      onclick="
-        if(messages > 0){
-          messages--;
-          if(messages === 0){
-            stopNotification();
-          }
-        }
-    ">Remove</button>
+    <button class="js-decrease-btn">Remove</button>
 
     <script>
       let messages = 2;
       let intervalId;
       let isDisplayingNotification;
+
+      let increasebtn = document.querySelector('.js-increase-btn');
+      const decreasebtn = document.querySelector('.js-decrease-btn');
 
       displayNotification();
 
@@ -37,7 +26,7 @@
         }
         isDisplayingNotification = true;
 
-        intervalId = setInterval(function(){
+        intervalId = setInterval(() => {
           if(document.title === 'App'){
             document.title = `(${messages}) New messages`;
           } else {
@@ -45,6 +34,20 @@
           }
         }, 1000);
       }
+
+      increasebtn.addEventListener('click', () => {
+        messages++;
+        displayNotification();
+      });
+
+      decreasebtn.addEventListener('click', () => {
+        if(messages > 0){
+          messages--;
+          if(messages === 0){
+            stopNotification();
+          }
+        }
+      });
 
       function stopNotification(){
         isDisplayingNotification = false;

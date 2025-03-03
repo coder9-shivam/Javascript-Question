@@ -59,6 +59,7 @@ products.forEach((products) => {
 document.querySelector('.js-product-grid')
   .innerHTML = productsHTML;
 
+
 // Interactive the Add To Cart Button
 const addedMessageTimeouts = {};
 document.querySelectorAll('.js-add-to-cart')
@@ -109,7 +110,6 @@ document.querySelectorAll('.js-add-to-cart')
       });
 
       // Put the quantity on the page.
-
       document.querySelector('.js-cart-quantity')
         .innerHTML = cartQuantity;
     });
